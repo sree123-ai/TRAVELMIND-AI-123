@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #FFF5D8;
+  --color-cream-light: #F9EBC7;
+  --color-brown-border: #7A421F;
+  --color-brown-shadow: #5A2B15;
+  --color-text-brown: #4A2412;
+  --color-orange: #F28A20;
+  --color-green: #7BC52B;
+  --color-blue: #3FA9DD;
+  --color-pink: #E84383;
+  --color-purple: #A946D1;
+  --color-cyan: #2FB7B7;
+  --color-gold: #F6C453;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--color-text-brown);
+  font-family: 'Fredoka', 'Nunito', 'Baloo 2', sans-serif;
+  background-color: #E2B779;
+  background-image: url('/assets/tourism_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Cream Parchment Container */
+.parchment-panel {
+  background: rgba(255, 245, 216, 0.94);
+  border: 3px solid #7A421F;
+  border-radius: 25px;
+  box-shadow: 0 10px 0 rgba(90, 43, 21, 0.45), 0 20px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.parchment-panel-solid {
+  background: #FFF5D8;
+  border: 3px solid #7A421F;
+  border-radius: 22px;
+  box-shadow: 0 8px 0 rgba(90, 43, 21, 0.4);
+}
+
+/* 3D Physical Buttons */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: 3px solid #7A421F;
+  border-radius: 18px;
+  box-shadow: 0 6px 0 #5A2B15;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-3d:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #5A2B15;
+}
+
+.btn-3d:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5A2B15;
+}
+
+.btn-3d:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Rounded 3D Inputs */
+.input-3d {
+  background: #FFFDF5;
+  border: 3px solid #7A421F;
+  border-radius: 16px;
+  box-shadow: inset 0 3px 6px rgba(90, 43, 21, 0.15), 0 4px 0 rgba(90, 43, 21, 0.15);
+  color: #4A2412;
+  font-weight: 600;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-3d:focus {
+  border-color: #F28A20;
+  box-shadow: inset 0 3px 6px rgba(90, 43, 21, 0.1), 0 0 0 3px rgba(242, 138, 32, 0.35);
+}
+
+/* Custom Scrollbar for parchment panels */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 245, 216, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B4A24;
+  border-radius: 10px;
+  border: 2px solid #FFF5D8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A421F;
+}

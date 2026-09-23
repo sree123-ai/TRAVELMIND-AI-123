@@ -1,0 +1,35 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 6px 0 #5A2B15, 0 0 15px rgba(242, 138, 32, 0.6); }
+  50% { box-shadow: 0 6px 0 #5A2B15, 0 0 25px rgba(242, 138, 32, 0.9); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 1.8s ease-in-out infinite;
+}
